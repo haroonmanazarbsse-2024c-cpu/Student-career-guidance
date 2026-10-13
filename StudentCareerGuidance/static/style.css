@@ -1,0 +1,140 @@
+/* static/style.css */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container, .form-container {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* For wider tables */
+.table-container {
+    max-width: 700px;
+}
+
+h1 { color: #2c3e50; font-size: 24px; margin-bottom: 20px; }
+h2 { color: #34495e; font-size: 20px; margin-bottom: 20px; }
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccd1d9;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.btn {
+    background-color: #3498db;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    margin-top: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+}
+
+a.text-link {
+    color: #3498db;
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+a.text-link:hover {
+    text-decoration: underline;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ecf0f1;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+    font-weight: 600;
+}
+
+tr:nth-child(even) { background-color: #f9f9f9; }
+tr:hover { background-color: #f1f1f1; }
+
+/* List Styles for Recommendations */
+ul.recommendation-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+ul.recommendation-list li {
+    background: #e8f4f8;
+    color: #2980b9;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    border-left: 5px solid #3498db;
+    text-align: left;
+}
+
+.spacer { margin-top: 20px; }

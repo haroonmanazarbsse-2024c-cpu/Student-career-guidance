@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        * { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; }
+        body { background-color: #f4f7f6; color: #333; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+        .container { background: #ffffff; padding: 40px 30px; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); width: 100%; max-width: 500px; text-align: center; }
+        h1 { color: #2c3e50; font-size: 24px; margin-bottom: 10px; }
+        h2 { color: #34495e; font-size: 18px; margin-bottom: 15px; margin-top: 15px; }
+        form { display: flex; flex-direction: column; gap: 12px; }
+        input[type="text"] { width: 100%; padding: 12px; border: 1px solid #ccd1d9; border-radius: 8px; font-size: 14px; }
+        input:focus { border-color: #3498db; outline: none; }
+        .btn { background-color: #3498db; color: white; padding: 12px 20px; border: none; border-radius: 8px; cursor: pointer; font-size: 15px; font-weight: bold; width: 100%; text-decoration: none; display: inline-block; transition: background-color 0.3s ease; }
+        .btn:hover { background-color: #2980b9; }
+        .btn-secondary { background-color: #95a5a6; margin-top: 15px; }
+        .btn-secondary:hover { background-color: #7f8c8d; }
+        a.text-link { color: #e74c3c; text-decoration: none; display: block; margin-top: 20px; font-size: 14px; font-weight: bold; }
+        a.text-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{ username }}!</h1>
+        <hr style="border: 0; border-top: 1px solid #ecf0f1;">
+        
+        <h2>Career Recommendation Form</h2>
+        <form action="/recommend" method="POST">
+            <input type="text" name="skills" placeholder="Skills (e.g., Python, Java, Design)" required>
+            <input type="text" name="interests" placeholder="Interests (e.g., AI, Web, Business)" required>
+            <button type="submit" class="btn">Get Recommendation</button>
+        </form>
+        
+        <a href="/careers" class="btn btn-secondary">View All Careers</a>
+        <a href="/logout" class="text-link">Logout</a>
+    </div>
+</body>
+</html>
